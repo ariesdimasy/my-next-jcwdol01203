@@ -19,8 +19,6 @@ export default function Page() {
   //   const router = useRouter();
   const [user, setUser] = useState({});
 
-  useEffect(async () => {});
-
   return (
     <DashboardLayout>
       <div className={style["product-list"]}>
