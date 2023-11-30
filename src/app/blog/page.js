@@ -7,7 +7,7 @@ import DashboardLayout from "../dashboardLayout";
 export default function Blog() {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const { data, error, isLoading } = useSWR(
-    "https://jsonplaceholder.typicode.com/posts",
+    "http://localhost:3000/api/blog",
     fetcher
   );
 
@@ -24,10 +24,12 @@ export default function Blog() {
       <h1 className="text-heading"> Blog </h1>
       <hr></hr>
       <ul>
-        {data?.posts?.map((item, index) => {
+        {data?.posts?.items?.map((item, index) => {
           return (
             <li key={index}>
-              <Link href={`/blog/${item.id}`}>{item.title}</Link>
+              <Link href={`/blog/${item.sys.id}`}>
+                {index + 1} . {item.fields.title}
+              </Link>
             </li>
           );
         })}

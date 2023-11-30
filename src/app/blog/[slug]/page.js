@@ -26,9 +26,9 @@ export default async function Page({ params }) {
 
   return (
     <div>
-      <h1 className="text-heading"> Blog Title : {blogDetail.title} </h1>
+      <h1 className="text-heading"> Blog Title : {blogDetail.fields.title} </h1>
       <hr></hr>
-      <p>{blogDetail.body}</p>
+      <p>{blogDetail.fields.description}</p>
     </div>
   );
 }
