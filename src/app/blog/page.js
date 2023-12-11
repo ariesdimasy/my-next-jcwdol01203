@@ -6,7 +6,10 @@ import DashboardLayout from "../dashboardLayout";
 
 export default function Blog() {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const { data, error, isLoading } = useSWR("./api/blog", fetcher);
+  const { data, error, isLoading } = useSWR(
+    "https://my-next-jcwdol01203-1jzkfysaw-ariesdimasy.vercel.app/api/blog",
+    fetcher
+  );
 
   if (error) {
     return <div> Failed to Load</div>;

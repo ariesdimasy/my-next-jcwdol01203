@@ -3,9 +3,12 @@ import Link from "next/link";
 import DashboardLayout from "../dashboardLayout";
 
 async function getData() {
-  const res = await fetch("./api/todo", {
-    next: { tags: ["collection"] },
-  });
+  const res = await fetch(
+    "https://my-next-jcwdol01203-1jzkfysaw-ariesdimasy.vercel.app/api/todo",
+    {
+      next: { tags: ["collection"] },
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fecth Data");
