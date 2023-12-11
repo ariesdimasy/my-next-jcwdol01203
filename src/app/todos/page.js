@@ -3,7 +3,7 @@ import Link from "next/link";
 import DashboardLayout from "../dashboardLayout";
 
 async function getData() {
-  const res = await fetch("/api/todo", {
+  const res = await fetch("./api/todo", {
     next: { tags: ["collection"] },
   });
 
