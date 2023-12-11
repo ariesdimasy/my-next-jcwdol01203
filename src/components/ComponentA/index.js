@@ -1,3 +1,4 @@
+"use client";
 export default function ComponentA() {
   return (
     <div style={{ height: 500, width: 500, backgroundColor: "orange" }}>
